@@ -588,7 +588,7 @@ font-size:1.3rem;
     justify-content:center;
     align-items:center;
     gap:0.3rem;
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
   }
 
   /* 👇 Increase photo size */
@@ -628,7 +628,31 @@ section {
   text-align: center;
 }
 .hero-date{
-  white-space: nowrap;
+  white-space: normal;
+  text-align:center;
+  line-height:1.6;
+}
+  @media(max-width:768px){
+
+  .hero-title,
+  .event-name,
+  .venue-name,
+  .member-name,
+  .intro-names{
+    word-break:break-word;
+    overflow-wrap:break-word;
+    line-height:1.4;
+  }
+
+  .event-card{
+    word-wrap:break-word;
+  }
+
+  img{
+    max-width:100%;
+    height:auto;
+  }
+
 }
 </style>
 </head>
