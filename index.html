@@ -635,24 +635,25 @@ section {
   }
 }
 
-/* ===== FAMILY PHOTO (CLEAN VERSION) ===== */
+  /* ===== FAMILY PHOTO (FINAL CENTERED FIX) ===== */
 
 .family-photo-wrapper{
+  width: 100%;
   margin-top: 3rem;
   display: flex;
-  justify-content: center;
+  justify-content: center;   /* center horizontally */
   align-items: center;
 }
 
-/* Frame */
 .family-photo-frame{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
-  border-radius: 16px;
 
-  /* ✨ simple elegant border (no animation) */
+  margin: 0 auto;            /* extra centering safety */
+  padding: 10px;
+
+  border-radius: 16px;
   border: 2px solid rgba(200,151,58,0.6);
 
   background: #0d0500;
@@ -662,13 +663,17 @@ section {
   width: 100%;
 }
 
-/* Image */
 .family-photo-frame img{
   display: block;
-  margin: 0 auto;
+  margin: 0 auto;            /* centers image inside */
   max-width: 100%;
   height: auto;
   border-radius: 12px;
+}
+
+/* Ensure parent section doesn't shift alignment */
+.family-section{
+  text-align: center;
 }
 
 /* MOBILE */
@@ -678,6 +683,7 @@ section {
     padding: 8px;
   }
 }
+
 </style>
 </head>
 <body>
